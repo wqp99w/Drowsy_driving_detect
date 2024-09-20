@@ -58,7 +58,7 @@
 
 #### 맥박 RR 간격 검출 후 맥박 계산
 
-![맥박공식](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EB%A7%A5%EB%B0%95%EC%88%98%EA%B3%B5%EC%8B%9D.jpg
+![맥박공식](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EB%A7%A5%EB%B0%95%EC%88%98%EA%B3%B5%EC%8B%9D.jpg)
 
 + 위와 같은 공식을 사용하여 맥박을 계산하였습니다.
 
