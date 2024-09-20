@@ -50,6 +50,11 @@
 
 #### 맥박 RR 간격 검출 후 맥박 계산
 
+![맥박공식](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EB%A7%A5%EB%B0%95%EC%88%98%EA%B3%B5%EC%8B%9D.jpg)
+
+![맥박결과](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EB%A7%A5%EB%B0%95%EA%B2%B0%EA%B3%BC.jpg)
+
+
 ### 눈 감은 시간 측정 구현
 
 ![눈사이간격](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EB%88%88%EC%82%AC%EC%9D%B4%EA%B0%84%EA%B2%A9.jpg)
