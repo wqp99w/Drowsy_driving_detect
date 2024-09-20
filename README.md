@@ -12,118 +12,35 @@
 + Python, OpenCV, dlib
 + IDE : VS Code
 
-## 주요 구조
+## 기능 분석도
 
-### [Model]
++ ![기능분석도](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EA%B8%B0%EB%8A%A5%EB%B6%84%EC%84%9D%EB%8F%84.jpg)
 
-```java
++ ![기능분석도1](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EA%B8%B0%EB%8A%A5%EB%B6%84%EC%84%9D%EB%8F%841.jpg)
 
-@Entity
-public class Question {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long question_id;
-    private String author;
-    private String subject;
-    @Lob
-    private String content;
-    private String create_date;
-
-//중략
-
-}
-```
-
-+ 데이터베이스의 핵심 개념을 표현하여 여러 계층에서 재사용할 수 있도록 설계하였습니다.
-  
-
-### [View]
++ ![기능분석도2](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EA%B8%B0%EB%8A%A5%EB%B6%84%EC%84%9D%EB%8F%842.jpg)
 
 
-```java
-public class QuestionController {
-    @GetMapping("/")
-    public String question_list(Model model){
-        List<Question> questions =questionService.findQuestions().stream()
-                        .sorted((q1, q2) -> q2.getQuestion_id().compareTo(q1.getQuestion_id()))
-                                .collect(Collectors.toList());
-        model.addAttribute("questionList",questions);
-        return "Gooroom/question_list";
-    }
-    //중략
-}
 
-```
+## 구현 과정
 
+### 피부 영상을 통한 맥박 측정 구현
 
-```html
+#### 랜드마크 검출 및 관심 영역 설정
 
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>AD project</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
+#### CG값 추출
 
-<!-- 중략 -->
-            <tbody>
-            <tr th:if="${questionList.empty}">
-                <td colspan="4" class="text-center">질문이 없습니다.</td>
-            </tr>
-            <tr th:each="question, questionStat : ${questionList}">
-                <td th:text="${question.getQuestion_id()}"></td>
-                <td>
-                    <a th:href="@{/questions/{question_id}(question_id=${question.getQuestion_id()})}"
-                       th:text="${question.getSubject()}"></a>
-                </td>
-                <td th:text="${question.getAuthor()}"></td>
-                <td th:text="${question.getCreate_date()}"></td>
-            </tr>
-            </tbody>
-<!-- 중략 -->
+#### FFT 적용 및 관심 주파수 설정
 
-```
+#### 관심 주파수 영역 iFFT 적용
 
-+ Thymeleaf와 Bootstrap을 사용하여 동적으로 데이터를 바인딩하여 클라이언트와 서버 간의 데이터의 통신을 원활하게 처리하였습니다.
+#### 맥박 RR 간격 검출 후 맥박 계산
 
-### [Controller]
+### 눈 감은 시간 측정 구현
 
-```java
+#### 눈 사이의 간격 측정
 
-@Controller
-public class QuestionController {
-
-//중략
-
-@GetMapping("/questions/new")
-    public String createQuestion(){
-        return "Gooroom/question_form";
-    }
-
-    @PostMapping("/questions/new")
-    public String create(QuestionForm questionForm){
-        Question question = new Question();
-        question.setAuthor(questionForm.getAuthor());
-        question.setContent(questionForm.getContent());
-        question.setSubject(questionForm.getSubject());
-        question.setCreate_date(LocalDateTime.now().toString());
-        questionService.question_Create(question);
-        return "redirect:/";
-    }
-
-    @GetMapping("/questions/{question_id}")
-    public String question_detail(@PathVariable("question_id") Long question_id, Model model){
-        Optional<Question> question = questionService.findQuestion(question_id);
-        Question que = question.orElseThrow(() -> new NoSuchElementException("질문이 없습니다" + question_id));
-        model.addAttribute("question",que);
-        return "Gooroom/question_detail";
-    }
-
-//중략
-}
-
-```
-
-+ 질문 생성, 질문 상세 조회 등에 대해 명확하게 정의하여 코드의 가독성과 유지 보수성을 높였습니다.
+#### 눈 감은 시간 측정
 
 
 
