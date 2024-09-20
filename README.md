@@ -57,9 +57,10 @@
 
 ### 눈 감은 시간 측정 구현
 
+#### 눈 사이 간격 측정
 ![눈사이간격](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EB%88%88%EC%82%AC%EC%9D%B4%EA%B0%84%EA%B2%A9.jpg)
 
-#### 눈 사이의 간격/시 측정
+#### 눈 감은 시간 측정
 
 ![눈 간격 결과](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EB%88%88%EA%B0%84%EA%B2%A9%EA%B2%B0%EA%B3%BC.jpg)
 
