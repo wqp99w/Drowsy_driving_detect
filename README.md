@@ -34,32 +34,29 @@
 
 #### 랜드마크 검출 및 관심 영역 설정
 
-![기능분석도](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EA%B8%B0%EB%8A%A5%EB%B6%84%EC%84%9D%EB%8F%84.jpg)
+![얼굴관심영역설](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EC%96%BC%EA%B5%B4%EA%B4%80%EC%8B%AC%EC%98%81%EC%97%AD%EC%84%A4%EC%A0%95.jpg)
 
 #### CG값 추출
 
-![기능분석도](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EA%B8%B0%EB%8A%A5%EB%B6%84%EC%84%9D%EB%8F%84.jpg)
+![CG값 추출](https://github.com/wqp99w/read-me_image/blob/main/cpastone/CG%EA%B0%92%EC%B6%94%EC%B6%9C.jpg)
 
 #### FFT 적용 및 관심 주파수 설정
 
-![기능분석도](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EA%B8%B0%EB%8A%A5%EB%B6%84%EC%84%9D%EB%8F%84.jpg)
+![FFT 적용](https://github.com/wqp99w/read-me_image/blob/main/cpastone/FFT.jpg)
 
 #### 관심 주파수 영역 iFFT 적용
 
-![기능분석도](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EA%B8%B0%EB%8A%A5%EB%B6%84%EC%84%9D%EB%8F%84.jpg)
+![iFFT](https://github.com/wqp99w/read-me_image/blob/main/cpastone/iFFT.jpg)
 
 #### 맥박 RR 간격 검출 후 맥박 계산
 
 ### 눈 감은 시간 측정 구현
 
-![기능분석도](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EA%B8%B0%EB%8A%A5%EB%B6%84%EC%84%9D%EB%8F%84.jpg)
+![눈사이간격](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EB%88%88%EC%82%AC%EC%9D%B4%EA%B0%84%EA%B2%A9.jpg)
 
-#### 눈 사이의 간격 측정
+#### 눈 사이의 간격/시 측정
 
-![기능분석도](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EA%B8%B0%EB%8A%A5%EB%B6%84%EC%84%9D%EB%8F%84.jpg)
+![눈 간격 결과](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EB%88%88%EA%B0%84%EA%B2%A9%EA%B2%B0%EA%B3%BC.jpg)
 
-#### 눈 감은 시간 측정
-
-![기능분석도](https://github.com/wqp99w/read-me_image/blob/main/cpastone/%EA%B8%B0%EB%8A%A5%EB%B6%84%EC%84%9D%EB%8F%84.jpg)
 
 
